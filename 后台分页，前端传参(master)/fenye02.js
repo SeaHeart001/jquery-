@@ -72,14 +72,16 @@ function pageInit(pageWeb,pagenNum,btnNumsView,callback) {
 
             //输入数字input
             $('#enterInput input[type="button"]').click(function () {
-                var pageValue = $('#enterInput input[type="text"]').val();
-                if(pageValue<1||pageValue>pagenNum||pageValue==''){
+                var pageValue = +$.trim($('#enterInput input[type="text"]').val());
+                console.log(pageValue,typeof(pageValue))
+                if(pageValue<1||pageValue>pagenNum||pageValue==''||isNaN(pageValue)==true){
                     $('#enterInput input[type="text"]').val('');
                     alert('请输入合理的数字')
                 }else{
+                    console.log('数字合理')
                     curruntIndex = pageValue-1;
                     pageFenye();
-                    $('#enterInput input[type="text"]').val(curruntIndex+1);
+                    //$('#enterInput input[type="text"]').val(curruntIndex+1);
                 }
             })
 
