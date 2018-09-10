@@ -40,7 +40,7 @@ function pageInit(pageWeb,pagenNum,btnNumsView,callback) {
             //dom结构END
 
             //dom结构的css, START
-            var btnWidth = parseInt(inputElement.css('width'))+10;//一个按钮的width
+            var btnWidth = parseInt(inputElement.css('width'))+10;//一个按钮包括外边距的width
             var btnWrap = btnWidth * pagenNum;
             var numBtnWidth = btnWidth * btnNumsView + 10;
             numBtnWrap.css('width', btnWrap);
