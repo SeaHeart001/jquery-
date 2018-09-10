@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装简单的分页</title>
+    <link rel="stylesheet" href="./fenye.css">
+    <style>
+        #pageWeb{
+            position: absolute;
+            top:1px;
+            left: 1px;
+        }
+    </style>
+</head>
+    <div id="pageWeb"></div>
+<body>
+
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="./fenye.js"></script>
+    <script>
+        $(function () {
+            var $jsons = [//29个
+            { name: 'username1', age: 18, wrok: 'web1' },
+            { name: 'username2', age: 19, wrok: 'web2' },
+            { name: 'username3', age: 20, wrok: 'web3' },
+            { name: 'username4', age: 21, wrok: 'web4' },
+            { name: 'username5', age: 22, wrok: 'web5' },
+            { name: 'username6', age: 23, wrok: 'web6' },
+            { name: 'username7', age: 24, wrok: 'web7' },
+            { name: 'username8', age: 25, wrok: 'web8' },
+            { name: 'username9', age: 26, wrok: 'web9' },
+            { name: 'username10', age: 27, wrok: 'web10' },
+            { name: 'username11', age: 28, wrok: 'web11' },
+            { name: 'username12', age: 29, wrok: 'web12' },
+            { name: 'username13', age: 18, wrok: 'web14' },
+            { name: 'username24', age: 19, wrok: 'web22' },
+            { name: 'username34', age: 20, wrok: 'web32' },
+            { name: 'username42', age: 21, wrok: 'web41' },
+            { name: 'username51', age: 22, wrok: 'web35' },
+            { name: 'username62', age: 23, wrok: 'web46' },
+            { name: 'username74', age: 24, wrok: 'web47' },
+            { name: 'username81', age: 25, wrok: 'web28' },
+            { name: 'username96', age: 26, wrok: 'web19' },
+            { name: 'username54', age: 27, wrok: 'web120' },
+            { name: 'username38', age: 28, wrok: 'web101' },
+            { name: 'username39', age: 28, wrok: 'web102' },
+            { name: 'username107', age: 27, wrok: 'web107' },
+            { name: 'username113', age: 28, wrok: 'web118' },
+            { name: 'username122', age: 29, wrok: 'web121' },
+            { name: 'username131', age: 18, wrok: 'web141' },
+            { name: 'username100', age: 29, wrok: 'web100' }
+        ]
+            var pagenNum = 10;//总页数
+            var btnNumsView = 3;//显示的按钮数
+            var pageWeb = $('#pageWeb');//page的dom
+            pageFenye($jsons,pageWeb,pagenNum,btnNumsView,function (data) {//请求的数据，page的dom,总页数，显示的按钮数,回调data为每页的数据
+                console.log('显示的数据',data)
+            }) 
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #page {
+            display: flex;
+        }
+
+        .page input {
+            border: 0;
+        }
+        .toggleBtn{
+            background: #fff;
+            outline:none;
+            border: 0;
+            /* border-bottom:1px solid #333; */
+        }
+        .toggleBtn:hover{
+            color: #ffae00;
+        }
+        .f_espllise{
+            margin-left:10px;
+            display: none;
+        }
+        .h_espllise{
+            margin-right:10px;
+            /* display: none; */
+        }
+        .numBtn {
+            /* width: 400px; */
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .numBtn input {
+            float: left;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-right: 10px;
+            border: 0;
+            background: #fff;
+            outline: none
+        }
+
+        .numBtn input:last-of-type {
+            margin-right: 0;
+        }
+
+        #num {
+            /* width: 130px; */
+            overflow-x: auto;
+            padding-top: 3px;
+        }
+
+        #num::-webkit-scrollbar {
+            height: 0;
+        }
+
+        #num::-webkit-scrollbar-thumb {
+            height: 0;
+        }
+
+        .active {
+            /* background-color: #86caa8; */
+            color: #0099ff;
+        }
+        #enterInput{
+            margin-left: 20px;
+            height: 30px;
+            line-height: 30px;
+            font-size:15px;
+            padding-top: 1px
+        }
+        #enterInput input[type='text']{
+            margin: 0 5px;
+            border: 0;
+            border-bottom: 1px solid #333;
+            height: 18px;
+            width: 18px;
+            text-align: center;
+            line-height: 18px;
+            outline: none
+        }
+        #enterInput input[type='button']{
+            margin: 0 10px;
+            border: 0;
+            outline: none;
+            height: 30px;
+            width: 60px;
+            background: #fff;
+            /* border-bottom: 1px solid #333; */
+        }
+        #enterInput input[type='button']:hover{
+            color: #ffae00;
+        }
